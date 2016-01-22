@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simon</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script src="app.js"></script>
+</head>
+<body>
+	<div ng-app="ceece-simon" ng-controller="SimonCtrl" class="section-outer">
+		<div class="section-inner">
+			<div class="simon">
+				<div class="wrap">
+					<div ng-repeat="number in [1,2,3,4]" class="tile tile-{{number}}" ng-mousedown="pushOn(number)" ng-mouseup="release()" ng-mouseleave="release()" ng-class="{ 'blink': isPushingAt(number) }"></div>
+					<div class="verticle-line"></div>
+					<div class="horizon-line"></div>
+				</div>
+				<div class="panel">
+					<h1>Simon</h1>
+					<div class="row">
+						<div class="col-xs-offset-7 col-xs-3 box-button">
+							<div class="led" ng-class="{ blink: isRestrict() }"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-offset-2 col-xs-3 box-button">
+							<div class="display text-right">{{ count() }}</div>
+						</div>
+						<div class="col-xs-2 box-button">
+							<div ng-click="restart()" class="button button-start"></div>
+						</div>
+						<div class="col-xs-3 box-button">
+							<div ng-click="restrictSwitch()" class="button button-restrict"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-offset-2 col-xs-3 box-button">
+							<div>count</div>
+						</div>
+						<div class="col-xs-2 box-button">
+							<div>start</div>
+						</div>
+						<div class="col-xs-3 box-button">
+							<div>restrict</div>
+						</div>
+					</div>
+					<div class="text-center">
+						<div class="onoffswitch">
+						<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" ng-model="__on">
+							<label class="onoffswitch-label" for="myonoffswitch">
+								<span class="onoffswitch-inner"></span>
+								<span class="onoffswitch-switch"></span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

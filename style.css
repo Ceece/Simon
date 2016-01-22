@@ -1,0 +1,212 @@
+@import url(http://fonts.googleapis.com/css?family=Alfa+Slab+One|Oswald|Share+Tech+Mono);
+
+html, body {
+	height: 100%;
+	width: 100%;
+	font-family: Oswald, 'Alfa Slab One' !important;
+}
+
+.section-outer {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+.section-inner {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.simon {
+	width: 400px;
+	height: 400px;
+	background: #000000;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.simon .panel {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+    top: -300px;
+    left: 80px;
+    background-color: #ffffff;
+    border: 15px solid black;
+}
+
+
+.simon table {
+	margin: 0 auto;
+}
+
+.simon .tile {
+	height: 180px;
+	width: 180px;
+	float: left;
+}
+
+.simon .tile-1 {
+	background-color: #00a74a;
+	border-top-left-radius: 100%;
+}
+
+.simon .tile-1.blink {
+    background: #13ff7c;
+}
+
+.simon .tile-2 {
+	background-color: #9f0f17;
+	border-top-right-radius: 100%;
+}
+
+.simon .tile-2.blink {
+	background-color: #ff4c4c;
+}
+
+.simon .tile-3 {
+	background-color: #cca707;
+	border-bottom-left-radius: 100%;
+}
+
+.simon .tile-3.blink {
+	background-color: #fed93f;
+}
+
+.simon .tile-4 {
+	background-color: #094a8f;
+	border-bottom-right-radius: 100%;
+}
+
+.simon .tile-4.blink {
+	background-color: #1c8cff;
+}
+
+.simon .verticle-line {
+	position: relative;
+	left: 170px;
+	width: 20px;
+	height: 360px;
+	background-color: #000000;
+}
+
+.simon .horizon-line {
+	position: relative;
+	top: -190px;
+	height: 20px;
+	width: 360px;
+	background-color: #000000;
+}
+
+.simon .led {
+	width: 10px;
+	height: 10px;
+	border: 2px solid black;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	margin: 0 auto 5px auto;
+	background-color: #555555;
+}
+
+.simon .led.blink {
+	background-color: #EE0000;
+}
+
+.simon .button {
+	width: 25px;
+	height: 25px;
+	border: 3px solid black;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+.simon .button.button-start {
+	background-color: #ff0000;
+}
+
+.simon .button.button-restrict {
+	background-color: #fed93f;
+}
+
+.simon .panel .display {
+    background-color: #000000;
+    width: 40px;
+    border: 2px solid #505050;
+    border-radius: 5px;
+    color: orangered;
+    margin-left: 5px;
+    font-family: 'Share Tech Mono';
+    font-size: 15px;
+    height: 25px;
+    padding: 0 10px;
+}
+
+.simon .panel .box-button {
+	padding: 0;
+}
+
+.onoffswitch {
+    margin: 0 auto;
+}
+
+/**
+ * generate on/of by https://proto.io/freebies/onoff/
+ */
+
+.onoffswitch {
+    position: relative; width: 45px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 0px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 15px; padding: 0; line-height: 11px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+.onoffswitch-inner:before {
+    content: "";
+    padding-left: 10px;
+    background-color: #2E8DEF; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "";
+    padding-right: 10px;
+    background-color: #FFFFFF; color: #333333;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 10px; margin: 0px;
+    background: #000000;
+    position: absolute; top: 0; bottom: 0;
+    right: 35px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
